@@ -29,7 +29,7 @@ for (const folder of functionsFolder) {
     .filter((file) => file.endsWith(".js"));
 
   for (const file of functionsFiles)
-    require(path.join(__dirname, "functions", folder, file))(client);
+    require(`./functions/${folder}/${file}`)(client);
 }
 
 client.handleEvents();
