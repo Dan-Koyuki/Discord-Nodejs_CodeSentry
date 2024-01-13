@@ -48,3 +48,9 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+setInterval(() => {
+  fetch('https://discord-nodejs-code-sentry.vercel.app/')
+    .then(() => console.log('Ping successful!'))
+    .catch((error) => console.error('Error pinging:', error));
+}, 5 * 60 * 1000);
