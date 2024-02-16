@@ -37,8 +37,15 @@ client.handleSlashCommands();
 client.handleCustomCommands();
 client.login(token);
 
-setInterval(() => {
-  fetch('https://discord-nodejs-code-sentry.vercel.app/')
-    .then(() => console.log('Ping successful!'))
-    .catch((error) => console.error('Error pinging:', error));
-}, 1 * 60 * 1000);
+// ?Server
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Your Discord bot is alive!');
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
