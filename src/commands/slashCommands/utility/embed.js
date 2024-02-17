@@ -32,6 +32,10 @@ module.exports = {
           value: 'Value of Field 2',
           inline: true
         },
-      ])
+      ]);
+
+      await interaction.reply({
+        embeds: [embed]
+      });
   },
 };
