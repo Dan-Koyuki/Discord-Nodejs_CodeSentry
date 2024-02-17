@@ -2,11 +2,11 @@ const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("Dan Koyuki")
+    .setName(`Dan Koyuki`)
     .setDescription("Author Contact!"),
   async execute(interaction, client) {
     const embed = new EmbedBuilder()
-      .setTitle(`Hello, ${interaction.user.tag}`)
+      .setTitle(`Hello, I\'m Dan Koyuki.`)
       .setDescription(`Currently Nothing!`)
       .setColor('Navy')
       .setThumbnail(client.user.displayAvatarURL())
