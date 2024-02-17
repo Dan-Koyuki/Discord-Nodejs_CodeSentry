@@ -5,6 +5,10 @@ module.exports = {
     .setName("pingembed")
     .setDescription("Return My Ping!"),
   async execute(interaction, client) {
+    const message = await interaction.deferReply({
+      fetchReply: true
+    });
+
     const embed = new EmbedBuilder()
       .setTitle(`Hello, ${interaction.user.tag}`)
       .setDescription(`API Latency: ${client.ws.ping}\nClient Ping: ${message.createdTimestamp - interaction.createdTimestamp}`)
