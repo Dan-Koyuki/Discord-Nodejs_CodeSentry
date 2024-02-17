@@ -25,7 +25,7 @@ module.exports = {
         text: client.user.tag
       });
 
-      await interaction.reply({
+      await interaction.editReply({
         embeds: [embed]
       });
   },
