@@ -12,6 +12,7 @@ module.exports = {
       .setImage(client.user.displayAvatarURL())
       .setThumbnail('https://res.cloudinary.com/dankoyuki/image/upload/v1706862368/Custom%20Card/l3dulnz3rs8j8gnaydnj.png')
       .setTimestamp(Date.now())
+      .setURL('https://dan-koyuki-profile.vercel.app')
       .setAuthor({
         url: 'https://dan-koyuki-profile.vercel.app',
         iconURL: 'https://res.cloudinary.com/dankoyuki/image/upload/v1706862368/Custom%20Card/l3dulnz3rs8j8gnaydnj.png',
